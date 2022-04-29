@@ -1,0 +1,33 @@
+{
+  "name": "cygnetwork",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte)",
+  "main": "package.json",
+  "author": "PWR <cell@pwr.site>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.29.5",
+    "@sanity/components": "^2.14.0",
+    "@sanity/core": "^2.29.5",
+    "@sanity/default-layout": "^2.29.7",
+    "@sanity/default-login": "^2.29.5",
+    "@sanity/desk-tool": "^2.29.7",
+    "@sanity/vision": "^2.29.5",
+    "get-video-id": "^3.5.3",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "react-icons": "^4.3.1",
+    "sanity-plugin-color-picker": "^1.0.3",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {}
+}
