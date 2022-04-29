@@ -25,7 +25,7 @@ export default {
             description: 'Read-only configuration value',
             name: 'discordGuildId',
             type: 'string',
-            //readOnly: true
+            readOnly: true
         },
         {
             title: 'Auth0 Client ID',
