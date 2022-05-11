@@ -37,6 +37,15 @@ export default () =>
                         .params({ type: 'instance' })
                 ),
             S.listItem()
+                .title('All cycles')
+                .icon(MdReplay)
+                .child(
+                    S.documentList()
+                        .title('Cycles')
+                        .filter('_type == $type')
+                        .params({ type: 'cycle' })
+                ),
+            S.listItem()
                 .title('Cycles')
                 .icon(MdReplay)
                 .child(

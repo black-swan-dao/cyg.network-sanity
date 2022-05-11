@@ -16,6 +16,20 @@ export default {
             validation: Rule => Rule.required()
         },
         {
+            title: 'Instance',
+            name: 'instance',
+            type: 'reference',
+            validation: Rule => Rule.required(),
+            to: [{ type: 'instance' }]
+        },
+        {
+            title: 'Cycle',
+            name: 'cycle',
+            type: 'reference',
+            validation: Rule => Rule.required(),
+            to: [{ type: 'cycle' }]
+        },
+        {
             title: 'Submitted',
             name: 'submitted',
             type: 'boolean'
@@ -59,20 +73,6 @@ export default {
             title: 'Content',
             name: 'content',
             type: 'text',
-        },
-        {
-            title: 'Instance',
-            name: 'instance',
-            type: 'reference',
-            validation: Rule => Rule.required(),
-            to: [{ type: 'instance' }]
-        },
-        {
-            title: 'Cycle',
-            name: 'cycle',
-            type: 'reference',
-            validation: Rule => Rule.required(),
-            to: [{ type: 'cycle' }]
         },
         {
             title: 'Slug',
