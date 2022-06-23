@@ -78,6 +78,53 @@ export default {
       type: 'datetime'
     },
     {
+      title: 'Rank results by resource',
+      name: 'rankResultsByResource',
+      type: 'boolean',
+      initialValue: false
+    },
+    {
+      title: 'Use voting weights',
+      name: 'useVotingWeights',
+      type: 'boolean',
+      initialValue: false
+    },
+    {
+      title: 'Vote weights',
+      name: 'voteWeights',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              title: 'Role',
+              name: 'role',
+              type: 'string',
+            },
+            {
+              title: 'Weight',
+              name: 'weight',
+              type: 'number',
+            },
+          ],
+          preview: {
+            select: {
+              role: 'role',
+              weight: 'weight',
+            },
+            prepare(selection) {
+              const { role, weight } = selection
+              return {
+                title: role + ': ' + weight,
+              }
+            },
+          }
+        },
+      ],
+      hidden: ({ document }) => !document?.useVotingWeights,
+    },
+    {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
