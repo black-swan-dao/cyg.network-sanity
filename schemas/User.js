@@ -21,7 +21,12 @@ export default {
             to: [{ type: 'instance' }]
         },
         {
-            title: 'Discord avatar URL',
+            title: 'Connection',
+            name: 'connection',
+            type: 'string'
+        },
+        {
+            title: 'Avatar URL',
             name: 'avatarURL',
             type: 'string'
         },

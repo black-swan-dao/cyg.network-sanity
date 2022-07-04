@@ -21,11 +21,25 @@ export default {
             readOnly: true
         },
         {
+            title: 'Connection',
+            name: 'connection',
+            type: 'string'
+        },
+        {
             title: 'Discord Guild ID',
             description: 'Read-only configuration value',
             name: 'discordGuildId',
             type: 'string',
-            readOnly: true
+            readOnly: true,
+            hidden: ({ document }) => document?.connection == 'slack'
+        },
+        {
+            title: 'Slack Workspace ID',
+            description: 'Read-only configuration value',
+            name: 'slackWorkspaceId',
+            type: 'string',
+            // readOnly: true
+            hidden: ({ document }) => !document?.connection == 'slack'
         },
         {
             title: 'Auth0 Client ID',
