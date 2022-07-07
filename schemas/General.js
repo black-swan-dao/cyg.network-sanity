@@ -15,26 +15,14 @@ export default {
             type: 'contentEditor',
         },
         {
+            title: 'About',
+            name: 'about',
+            type: 'contentEditor',
+        },
+        {
             title: 'FAQ',
             name: 'faq',
-            type: 'array',
-            of: [
-                {
-                    type: 'object',
-                    fields: [
-                        {
-                            title: 'Question',
-                            name: 'question',
-                            type: 'string',
-                        },
-                        {
-                            title: 'Answer',
-                            name: 'answer',
-                            type: 'text',
-                        },
-                    ],
-                },
-            ]
+            type: 'contentEditor',
         },
         {
             title: 'Request form url',
