@@ -27,7 +27,8 @@ export default {
             name: 'cycle',
             type: 'reference',
             validation: Rule => Rule.required(),
-            to: [{ type: 'cycle' }]
+            to: [{ type: 'cycle' }],
+            weak: true
         },
         {
             title: 'Main image',

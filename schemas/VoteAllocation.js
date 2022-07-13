@@ -6,7 +6,8 @@ export default {
             title: 'Proposal',
             name: 'proposal',
             type: 'reference',
-            to: [{ type: 'proposal' }]
+            to: [{ type: 'proposal' }],
+            weak: true
         },
         {
             title: 'Vote credits',

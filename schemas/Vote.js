@@ -36,7 +36,8 @@ export default {
             title: 'Cycle',
             name: 'cycle',
             type: 'reference',
-            to: [{ type: 'cycle' }]
+            to: [{ type: 'cycle' }],
+            weak: true
         },
         {
             title: 'Submitted',

@@ -21,7 +21,8 @@ export default {
             name: 'cycle',
             type: 'reference',
             to: [{ type: 'cycle' }],
-            readOnly: true
+            readOnly: true,
+            weak: true
         },
         {
             title: 'Total Vote Credits',
@@ -63,7 +64,8 @@ export default {
                             name: 'proposal',
                             type: 'reference',
                             to: [{ type: 'proposal' }],
-                            readOnly: true
+                            readOnly: true,
+                            weak: true
                         },
                         {
                             title: 'Effective votes',

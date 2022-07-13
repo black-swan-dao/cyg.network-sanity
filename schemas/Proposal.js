@@ -27,7 +27,8 @@ export default {
             name: 'cycle',
             type: 'reference',
             validation: Rule => Rule.required(),
-            to: [{ type: 'cycle' }]
+            to: [{ type: 'cycle' }],
+            weak: true
         },
         {
             title: 'Submitted',
@@ -56,7 +57,8 @@ export default {
                     title: 'Resource',
                     name: 'resource',
                     type: 'reference',
-                    to: [{ type: 'resource' }]
+                    to: [{ type: 'resource' }],
+                    weak: true
                 },
             ]
         },

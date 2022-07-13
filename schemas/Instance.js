@@ -46,7 +46,7 @@ export default {
             description: 'Read-only configuration value. Encrypted.',
             name: 'slackToken',
             type: 'string',
-            readOnly: true,
+            // readOnly: true,
             hidden: ({ document }) => !document?.connection == 'slack'
         },
         {
