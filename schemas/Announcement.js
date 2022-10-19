@@ -35,13 +35,13 @@ export default {
             maxLength: 4096,
             validation: Rule => Rule.required()
         },
-				{
-						title: 'Is posted',
-						description: 'Determine whether announcement was sent out',
-						name: 'isPosted',
-						type: 'boolean',
-						initialValue: false
-				},
+	{
+	    title: 'Is posted',
+	    description: 'Determine whether announcement was sent out',
+	    name: 'isPosted',
+	    type: 'boolean',
+	    initialValue: false
+	},
         {
             title: 'Instance',
             name: 'instance',
