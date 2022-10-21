@@ -18,6 +18,7 @@ import vote from './Vote.js'
 import result from './Result.js'
 import general from './General.js'
 import instance from './Instance.js'
+import announcement from './Announcement.js'
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -27,6 +28,6 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    result, voteAllocation, vote, cycle, proposal, resource, user, simpleEditor, contentEditor, embedBlock, videoBlock, audioBlock, general, instance
+    result, voteAllocation, vote, cycle, proposal, resource, user, simpleEditor, contentEditor, embedBlock, videoBlock, audioBlock, general, instance, announcement
   ]),
 })
