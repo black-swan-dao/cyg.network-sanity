@@ -37,13 +37,23 @@ export default {
 	},
 	{
 	    title: 'Recipient roles',
+            description: 'Discord roles which will receive the announcement',
 	    name: 'recipient_roles',
 	    type: 'array',
 	    of: [{ type: 'string' }],
 	    options: {
 	        layout: 'tags'
-	    },
-	    validation: Rule => Rule.required()
+	    }
+	},
+	{
+	    title: 'Recipient channels',
+            description: 'Discord guild channels the announcement gets posted to',
+	    name: 'recipient_channels',
+	    type: 'array',
+	    of: [{ type: 'string' }],
+	    options: {
+	        layout: 'tags'
+	    }
 	},
 	{
 	    title: 'Is posted',
