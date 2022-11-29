@@ -25,16 +25,26 @@ export default {
             title: 'Link URL',
             description: 'URL the announcement will point to (Cygnet page, event...)',
             name: 'link',
-            type: 'url'
+            type: 'url',
+            validation: Rule => Rule.max(256)
         },
         {
             title: 'Text',
             description: 'Announcement body text',
             name: 'text',
             type: 'text',
-            maxLength: 4096,
-            validation: Rule => Rule.required()
-        },
+            validation: Rule => Rule.required().max(4000)
+	},
+	{
+	    title: 'Recipient roles',
+	    name: 'recipient_roles',
+	    type: 'array',
+	    of: [{ type: 'string' }],
+	    options: {
+	        layout: 'tags'
+	    },
+	    validation: Rule => Rule.required()
+	},
 	{
 	    title: 'Is posted',
 	    description: 'Determine whether announcement was sent out',
@@ -42,12 +52,12 @@ export default {
 	    type: 'boolean',
 	    initialValue: false
 	},
-        {
-            title: 'Instance',
-            name: 'instance',
-            type: 'reference',
-            validation: Rule => Rule.required(),
-            to: [{ type: 'instance' }]
-        },
+	{
+	    title: 'Instance',
+	    name: 'instance',
+	    type: 'reference',
+	    validation: Rule => Rule.required(),
+	    to: [{ type: 'instance' }]
+	},
     ]
 }
