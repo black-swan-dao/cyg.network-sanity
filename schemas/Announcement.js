@@ -34,40 +34,40 @@ export default {
             name: 'text',
             type: 'text',
             validation: Rule => Rule.required().max(4000)
-	},
-	{
-	    title: 'Recipient roles',
+        },
+        {
+            title: 'Recipient roles',
             description: 'Discord roles which will receive the announcement',
-	    name: 'recipient_roles',
-	    type: 'array',
-	    of: [{ type: 'string' }],
-	    options: {
-	        layout: 'tags'
-	    }
-	},
-	{
-	    title: 'Recipient channels',
+            name: 'recipient_roles',
+            type: 'array',
+            of: [{ type: 'string' }],
+            options: {
+                layout: 'tags'
+            }
+        },
+        {
+            title: 'Recipient channels',
             description: 'Discord guild channels the announcement gets posted to',
-	    name: 'recipient_channels',
-	    type: 'array',
-	    of: [{ type: 'string' }],
-	    options: {
-	        layout: 'tags'
-	    }
-	},
-	{
-	    title: 'Is posted',
-	    description: 'Determine whether announcement was sent out',
-	    name: 'isPosted',
-	    type: 'boolean',
-	    initialValue: false
-	},
-	{
-	    title: 'Instance',
-	    name: 'instance',
-	    type: 'reference',
-	    validation: Rule => Rule.required(),
-	    to: [{ type: 'instance' }]
-	},
+            name: 'recipient_channels',
+            type: 'array',
+            of: [{ type: 'string' }],
+            options: {
+                layout: 'tags'
+            }
+        },
+        {
+            title: 'Is posted',
+            description: 'Determine whether announcement was sent out',
+            name: 'isPosted',
+            type: 'boolean',
+            initialValue: false
+        },
+        {
+            title: 'Instance',
+            name: 'instance',
+            type: 'reference',
+            validation: Rule => Rule.required(),
+            to: [{ type: 'instance' }]
+        },
     ]
 }
