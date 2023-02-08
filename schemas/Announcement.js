@@ -25,23 +25,43 @@ export default {
             title: 'Link URL',
             description: 'URL the announcement will point to (Cygnet page, event...)',
             name: 'link',
-            type: 'url'
+            type: 'url',
+            validation: Rule => Rule.max(256)
         },
         {
             title: 'Text',
             description: 'Announcement body text',
             name: 'text',
             type: 'text',
-            maxLength: 4096,
-            validation: Rule => Rule.required()
+            validation: Rule => Rule.required().max(4000)
         },
-	{
-	    title: 'Is posted',
-	    description: 'Determine whether announcement was sent out',
-	    name: 'isPosted',
-	    type: 'boolean',
-	    initialValue: false
-	},
+        {
+            title: 'Recipient roles',
+            description: 'Discord roles which will receive the announcement',
+            name: 'recipient_roles',
+            type: 'array',
+            of: [{ type: 'string' }],
+            options: {
+                layout: 'tags'
+            }
+        },
+        {
+            title: 'Recipient channels',
+            description: 'Discord guild channels the announcement gets posted to',
+            name: 'recipient_channels',
+            type: 'array',
+            of: [{ type: 'string' }],
+            options: {
+                layout: 'tags'
+            }
+        },
+        {
+            title: 'Is posted',
+            description: 'Determine whether announcement was sent out',
+            name: 'isPosted',
+            type: 'boolean',
+            initialValue: false
+        },
         {
             title: 'Instance',
             name: 'instance',

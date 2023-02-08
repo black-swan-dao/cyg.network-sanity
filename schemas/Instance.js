@@ -34,13 +34,6 @@ export default {
             hidden: ({ document }) => document?.connection == 'slack'
         },
         {
-            title: 'Discord Announcement Channel ID',
-            description: 'ID of Discord channel to post announcements to',
-            name: 'discordAnnouncementChannelId',
-            type: 'string',
-            hidden: ({ document }) => document?.connection == 'slack'
-        },
-        {
             title: 'Slack Workspace ID',
             description: 'Read-only configuration value',
             name: 'slackWorkspaceId',

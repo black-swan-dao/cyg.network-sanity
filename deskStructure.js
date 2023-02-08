@@ -9,7 +9,8 @@ import {
     MdThumbUp,
     MdStar,
     MdGavel,
-    MdCircle
+    MdCircle,
+    MdMail
 } from "react-icons/md"
 
 export default () =>
@@ -218,5 +219,38 @@ export default () =>
                                 .filter('_type == "result" && instance._ref == $instanceId')
                                 .params({ instanceId })
                         )
+                ),
+            S.listItem()
+                .title('Announcements')
+                .icon(MdMail)
+                .child(
+                    S.list()
+                        .title("Announcements")
+                        .items([
+                            S.listItem()
+                                .title('All announcements')
+                                .icon(MdMail)
+                                .child(
+                                    S.documentList()
+                                        .title('Announcements')
+                                        .defaultLayout('detail')
+                                        .filter('_type == $type')
+                                        .params({ type: 'announcement' })
+                                ),
+                            S.listItem()
+                                .title('Announcements by instance')
+                                .icon(MdCircle)
+                                .child(
+                                    S.documentTypeList('instance')
+                                        .title('Announcmeents by instance')
+                                        .child(instanceId =>
+                                            S.documentList()
+                                                .title('Announcements')
+                                                .defaultLayout('detail')
+                                                .filter('_type == "announcement" && $instanceId == instance._ref')
+                                                .params({ instanceId })
+                                        )
+                                ),
+                        ])
                 ),
         ]);
