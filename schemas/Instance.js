@@ -98,6 +98,12 @@ export default {
             type: 'simpleEditor'
         },
         {
+            title: 'Mandatory image upload',
+            name: 'mandatoryImageUpload',
+            type: 'boolean',
+            initialValue: true
+        },
+        {
             title: 'Show ETH connection',
             name: 'showEthConnection',
             type: 'boolean',
